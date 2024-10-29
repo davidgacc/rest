@@ -57,7 +57,7 @@ public class UserController {
         }
     }
 
-    @PutMapping("/")
+    @PutMapping
     public ResponseEntity<UserResponseDto> updateUser(@Valid @RequestBody UserRequestDto usuarioRequest) {
         logger.info("Received request to update user with CPF: {}", usuarioRequest.getCpf());
 
@@ -71,7 +71,7 @@ public class UserController {
         }
     }
 
-    @PatchMapping("/")
+    @PatchMapping
     public ResponseEntity<UserResponseDto> updateUserPartial(@RequestBody UserRequestDto usuarioRequest) {
         logger.info("Received request to partially update user with CPF: {}", usuarioRequest.getCpf());
 
