@@ -19,8 +19,7 @@ docker build -t rest .
 ### 3. Run the MySQL Container
 
 ```bash
-docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=db -e MYSQL_USER=root -e MYSQL_PASSWORD=root -p 3306:3306 -d mysql:latest
-
+docker run --name mysql-db -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=db -e MYSQL_PASSWORD=root -p 3306:3306 -d mysql:latest
 ```
 
 ### 4. Create Tables
@@ -36,7 +35,7 @@ docker cp ./src/main/resources/create_tables.sql mysql-db:/create_tables.sql
 #### 4.2 execute script
 
 ```bash
- docker exec -i mysql-db mysql -u root -p'root' db < ./create_tables.sql
+docker exec -i mysql-db mysql -u root -p'root' db < ./create_tables.sql
 
 ```
 
