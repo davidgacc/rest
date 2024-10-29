@@ -1,5 +1,6 @@
 package com.example.rest.dto;
 
+import com.example.rest.model.Status;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsuarioRequestDto {
+public class UserRequestDto {
 
     @NotBlank(message = "CPF is mandatory")
     @Size(min = 11, max = 11, message = "CPF must be 11 digits")
@@ -49,4 +50,5 @@ public class UsuarioRequestDto {
     private String cep; // Expecting format XXXXX-XXX
 
     private String usuarioCriacao; // Optional; can be set server-side
+    private Status status;
 }

@@ -17,3 +17,6 @@ CREATE TABLE Usuario (
     data_remocao DATETIME,
     usuario_remocao VARCHAR(255)
 );
+
+-- create index
+CREATE INDEX idx_cpf ON usuarios (cpf);
